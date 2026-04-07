@@ -3,6 +3,7 @@ import {
   type AdventureSpec,
 } from './adventureBitmap'
 import { formatBitmapNameFromFileBase } from '../lib/bitmapDisplayName'
+import { publicAssetUrl } from '../lib/publicAssetUrl'
 
 export type BitmapManifestEntry = {
   id: string
@@ -11,8 +12,6 @@ export type BitmapManifestEntry = {
   /** 도트 합성 시 채워진 스테이지(칸) 상한 — 없으면 기본 ~200 */
   targetStages?: number
 }
-
-const MANIFEST_URL = '/bitmap/manifest.json'
 
 function loadImage(url: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -32,7 +31,7 @@ function loadImage(url: string): Promise<HTMLImageElement> {
 export async function loadPixelAdventureCatalog(): Promise<AdventureSpec[]> {
   let list: BitmapManifestEntry[] = []
   try {
-    const res = await fetch(MANIFEST_URL)
+    const res = await fetch(publicAssetUrl('bitmap/manifest.json'))
     if (!res.ok) return []
     list = (await res.json()) as BitmapManifestEntry[]
   } catch {
@@ -49,7 +48,7 @@ export async function loadPixelAdventureCatalog(): Promise<AdventureSpec[]> {
       fromManifest ||
       formatBitmapNameFromFileBase(baseFromFile) ||
       item.id
-    const url = `/bitmap/${item.file.replace(/^\/+/, '')}`
+    const url = publicAssetUrl(`bitmap/${item.file.replace(/^\/+/, '')}`)
     try {
       const img = await loadImage(url)
       const targetStages =
