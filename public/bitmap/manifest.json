@@ -1,0 +1,28 @@
+[
+  {
+    "id": "pixellab-banana-1775456435946",
+    "name": "Banana",
+    "file": "pixellab-banana-1775456435946.png"
+  },
+  {
+    "id": "pixellab-red-apple-green-leaf-1775456272572",
+    "name": "Apple",
+    "file": "pixellab-red-apple-green-leaf-1775456272572.png"
+  },
+  {
+    "id": "pixellab-watermelon-1775456364797",
+    "name": "Watermelon",
+    "file": "pixellab-watermelon-1775456364797.png"
+  },
+  {
+    "id": "monarisa",
+    "name": "모나리자",
+    "file": "monarisa.jpg",
+    "targetStages": 150
+  },
+  {
+    "id": "별빛밤",
+    "name": "별빛밤",
+    "file": "별빛밤.jpg"
+  }
+]

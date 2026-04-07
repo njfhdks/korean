@@ -1,0 +1,31 @@
+/**
+ * 두벌식 기준 물리 키 → 단일 자모 (쌍자음/Shift 조합 미포함 — 게임 규칙과 일치)
+ */
+export const CODE_TO_JAMO: Partial<Record<string, string>> = {
+  KeyQ: 'ㅂ',
+  KeyW: 'ㅈ',
+  KeyE: 'ㄷ',
+  KeyR: 'ㄱ',
+  KeyT: 'ㅅ',
+  KeyY: 'ㅛ',
+  KeyU: 'ㅕ',
+  KeyI: 'ㅑ',
+  KeyO: 'ㅐ',
+  KeyP: 'ㅔ',
+  KeyA: 'ㅁ',
+  KeyS: 'ㄴ',
+  KeyD: 'ㅇ',
+  KeyF: 'ㄹ',
+  KeyG: 'ㅎ',
+  KeyH: 'ㅗ',
+  KeyJ: 'ㅓ',
+  KeyK: 'ㅏ',
+  KeyL: 'ㅣ',
+  KeyZ: 'ㅋ',
+  KeyX: 'ㅌ',
+  KeyC: 'ㅊ',
+  KeyV: 'ㅍ',
+  KeyB: 'ㅠ',
+  KeyN: 'ㅜ',
+  KeyM: 'ㅡ',
+}
